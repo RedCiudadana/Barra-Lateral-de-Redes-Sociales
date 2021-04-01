@@ -1,0 +1,202 @@
+
+CHANGELOG
+______________________
+
+• 3.1.0 (12 November 2019):
+
+- Added 2 new settings called "shareUrl" and "shareTitle" to be able to specify a custom page URL and/or a custom page title to be used in the share window instead of the current page URL and current page title, in case where this functionality is needed.
+
+
+• 3.0.0 (14 August 2019):
+
+- Because the changes were so big in this version, added an "Archive" folder with the sidebar 2.2 version, for people that don't want to upgrade but still want access to the old files.
+
+- Rewrote the plugin JS code to be clearer, more efficient and easier extendable.
+
+  Added comments throughout as well.
+
+- Updated "Font Awesome" from version 4 to the newest version 5.
+
+  This new version has a lot of differences and many of the button icon class names have been updated now.
+
+- Updated the included jQuery file to the latest version as well as the links to the CDN version.
+
+- Updated the default share services:
+
+  - Added new services: Google Bookmarks, Evernote, Hacker News, Digg, Flipboard, Instapaper, Diaspora, QZone, OKru, Douban, Renren, Line, Email.
+
+  - Modified the Pinterest share functionality: No longer loads the Pinterest JS file with custom behaviour, instead uses the new Pinterest share URL.
+
+  - Removed the following services, as they no longer offer share support: Google+, MySpace, StumbleUpon, WhatsApp, Messenger.
+
+- Updated the default buttons:
+
+  - Added new buttons: Discord, Kickstarter, Patreon, Etsy, Snapchat, Bitcoin, Periscope, Android, Uber, Airbnb, iTunes, Audible, QQ, GoodReads, eBay, BandCamp, Google Drive, Google Play, Email.
+
+  - Removed buttons: Google+, StumbleUpon, WhatsApp, Messenger, Vine.
+
+- Moved the CSS and JS source files next to minified files so that it is easier to work with them.
+
+- Added a "Changelog.txt" file and moved here the version changes that were previously listed in the "Readme.txt" file.
+
+- Changed the "custom" setting color value to "default".
+
+- Changed the "labelsOn" setting name to "labelEnabled".
+
+- Added a new option called "windowDraggable" to make windows draggable by the header.
+
+- For the "shareServices" setting entries:
+
+  - Renamed the following properties:
+
+    - "target" to "type".
+
+    - "popup" to "window".
+
+  - Added a new type called "file", to be able to specify a JS file to be loaded, with custom share functionality (like the formerly used Pinterest JS file).
+
+  - For the "window.left" property, changed the "center" accepted value to "{CENTER}".
+
+  - Added "{CENTER}" as an accepted value for the "window.top" property as well.
+
+- Changed windows id prefix from "sidebar-" to "super-sidebar-".
+
+- Changed the buttons class prefix from "sb-" to "sb-b-" (ex: "sb-facebook" to "sb-b-facebook").
+
+- Added the "sb-subbar" class to the "ul" of subbars.
+
+- Changed the nuance of the blue color setting.
+
+- Changed the default sub effect to "linear-slide" and 40 ms.
+
+- Reordered the templates.
+
+- Updated the guide look.
+
+- Other small modifications and improvements.
+
+
+• 2.2.0 (29 March 2019):
+
+- Added a new setting called "animateEngine" to be able to control which engine is used for animations, either "velocity" (default, smoother animations) or "jQuery".
+
+  If using the jQuery option, it is no longer necessary to load the "velocity.min.js" file on the page.
+
+
+• 2.1.0 (02 March 2018):
+
+- Added a new setting called "subOpen" to control if subbars are opened on mouseover or on click.
+
+- Fixed a problem that was causing the old name of the setting "hideUnderWidth" to be used, called "hideUnder", instead of the new name. Maintained backward compatibility for the old name.
+
+
+• 2.0.0 (17 August 2017):
+
+- Added support for share buttons. Now it is possible to use buttons that will share the page on different services.
+
+  Included by default are 20 share services and their respective buttons. It is also possible to dynamically add any number of other services through the settings.
+
+- Added a new setting called "shareServices" to be able to control the settings of the existing share services or add new ones.
+
+- Added a new setting called "shareTarget" to specify how the share window is opened.
+
+- Added support for Font Awesome. Now there are hundreds of icons easily available and customizable through CSS.
+
+  Support for custom image icons still remains.
+
+- Added many new buttons. Now there are over 50 default buttons available.
+
+  Using the existing examples, it is possible to add any number of other buttons though the HTML/CSS code.
+
+- Added 2 new buttons with special functions: mailto and print.
+
+- Added a new setting called "hideUnderWidth" to specify if the sidebar should be hidden when the browser window is under a certain width.
+
+- Added a new setting called "showAfterPosition" to specify if the sidebar should be displayed only after the page has been scrolled beyond a certain point.
+
+- Added a new settings called "barAnimate" to specify the animate parameters of the bar with buttons.
+
+- Fixed an issue that was causing the subbars not to be positioned properly in some cases.
+
+- Fixed an issue that was causing the buttons above a subbar not to move properly in some cases.
+
+- Fixed an issue that was causing the labels not to display properly when having multiple spaced words.
+
+- Renamed the "labelAnim" setting to "labelAnimate". Added backward compatibility support for the former name.
+
+- Renamed the "subAnim" setting to "subAnimate". Added backward compatibility support for the former name.
+
+- Renamed the "color" setting to "buttonColor". Added backward compatibility support for the former name.
+
+- Renamed the "overColor" setting to "buttonOverColor". Added backward compatibility support for the former name.
+
+- Renamed the "shape" setting to "buttonShape". Added backward compatibility support for the former name.
+
+- Added a new setting called "iconColor" to specify the color of the button icon.
+
+- Added a new setting called "iconOverColor" to specify the color of the button icon on mouseover.
+
+- Added a new setting called "labelColor" to be able to specify the color of the button label independent of the button color.
+
+- Added a new setting called "labelTextColor" to be able to specify the color of the button label text independent of the button icon color.
+
+- Added 2 new default colors: "green" and "white".
+
+- Renamed the "default" color property value to "custom". Added backward compatibility support for the former name.
+
+- Added support for the button icon color to be controlled from the CSS code.
+
+- Updated the templates.
+
+- Added new template files that contain different markup code.
+
+- Added a new Readme file in the "Main" folder that explains what the different templates are and gives basic instructions.
+
+- Added 4 default window sizes.
+
+- Added "data-position" and "data-offset" settings to the window panel element to be able to set the position of each window individually apart from the general settings.
+
+- Turned the window shadow on by default.
+
+- Replaced the "RSS" window with the "About us" window.
+
+- Renamed the "img" folder to "images".
+
+- Fixed an issue that was causing the subbar not to show properly on quick mouseover after mouseout, for linear effects.
+
+- Fixed an issue that was causing the subbar not to close properly, for linear effects, when the cummulative interval time was higher than the animation time.
+
+- For subbar linear effects, moved the interval from the "subAnimate" setting to the "subEffect" setting.
+
+- Made improvements to the form functionality.
+
+- Moved the form status messages to the settings. Default messages are used if no customized messages are supplied.
+
+- Added a new setting called "formData" where you can specify data to be passed to the form. This includes status messages and data to be sent to the processing file on submit.
+
+- Improved the code of the contact and newsletter PHP files.
+
+- Added form support for response/error messages from AJAX and the processing file.
+
+- Removed the "mailTo" setting. The emails for the forms can now be set in the respective PHP files.
+
+- The CSS file is now minified by default. The unminified version is available in the "Sources" folder.
+
+- Added version numbering.
+
+- Updated the guide.
+
+- Updated the main Readme file.
+
+- Updated jQuery to the latest version.
+
+- Updated Velocity to the latest version.
+
+- A series of other small modifications and improvements.
+
+
+• 1.0.0 (5 February 2017):
+
+- Launched.
+
+

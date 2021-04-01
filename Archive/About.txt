@@ -1,0 +1,2 @@
+
+Because the changes from version 2.2.0 to 3.0.0 were so big, I have added the an "Archive" folder with the sidebar 2.2.0 version, for people that don't want to upgrade but still want to have access to the old version.

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Share buttons 1 - Super Sidebar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="preview-files/preview.css" type="text/css" rel="stylesheet">
+
+	<!-- Start of sidebar assets code -->
+	<!-- If you have Font Awesome, jQuery or Velocity on your page already, do not add them again. -->
+	<!-- When you deploy the files on the web, you can use the commented out CDN loading options instead, for a faster load time. -->
+	<link href="super-sidebar/css/super-sidebar.min.css" type="text/css" rel="stylesheet">
+	<link href="super-sidebar/font-awesome/css/all.min.css" type="text/css" rel="stylesheet">
+	<script src="super-sidebar/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script src="super-sidebar/js/velocity.min.js" type="text/javascript"></script>
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" type="text/css" rel="stylesheet"> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js" type="text/javascript"></script> -->
+	<script src="super-sidebar/js/jquery.super-sidebar.min.js" type="text/javascript"></script>
+	<!-- End of sidebar assets code -->
+
+</head>
+<body>
+
+	<!-- Start of sidebar markup code -->
+	<div class="super-sidebar">
+		<ul class="sb-bar">
+			<li class="sb-b-blogger">
+				<a data-share="blogger">
+					<div class="sb-icon fab fa-blogger-b"></div>
+					<div class="sb-label">Share on Blogger</div>
+				</a>
+			</li>
+			<li class="sb-b-buffer">
+				<a data-share="buffer">
+					<div class="sb-icon fab fa-buffer"></div>
+					<div class="sb-label">Share on Buffer</div>
+				</a>
+			</li>
+			<li class="sb-b-diaspora">
+				<a data-share="diaspora">
+					<div class="sb-icon fab fa-diaspora"></div>
+					<div class="sb-label">Share on Diaspora</div>
+				</a>
+			</li>
+			<li class="sb-b-digg">
+				<a data-share="digg">
+					<div class="sb-icon fab fa-digg"></div>
+					<div class="sb-label">Share on Digg</div>
+				</a>
+			</li>
+			<li class="sb-b-douban">
+				<a data-share="douban">
+					<div class="sb-icon fas fa-user"></div>
+					<div class="sb-label">Share on Douban</div>
+				</a>
+			</li>
+			<li class="sb-b-email">
+				<a data-share="email">
+					<div class="sb-icon fas fa-at"></div>
+					<div class="sb-label">Share on Email</div>
+				</a>
+			</li>
+			<li class="sb-b-evernote">
+				<a data-share="evernote">
+					<div class="sb-icon fab fa-evernote"></div>
+					<div class="sb-label">Save on Evernote</div>
+				</a>
+			</li>
+			<li class="sb-b-facebook">
+				<a data-share="facebook">
+					<div class="sb-icon fab fa-facebook-f"></div>
+					<div class="sb-label">Share on Facebook</div>
+				</a>
+			</li>
+			<li class="sb-b-flipboard">
+				<a data-share="flipboard">
+					<div class="sb-icon fab fa-flipboard"></div>
+					<div class="sb-label">Share on Flipboard</div>
+				</a>
+			</li>
+			<li class="sb-b-google-bookmarks">
+				<a data-share="google-bookmarks">
+					<div class="sb-icon fab fa-google"></div>
+					<div class="sb-label">Save to Google Bookmarks</div>
+				</a>
+			</li>
+			<li class="sb-b-hacker-news">
+				<a data-share="hacker-news">
+					<div class="sb-icon fab fa-hacker-news"></div>
+					<div class="sb-label">Share on Hacker News</div>
+				</a>
+			</li>
+			<li class="sb-b-instapaper">
+				<a data-share="instapaper">
+					<div class="sb-icon fas fa-italic"></div>
+					<div class="sb-label">Save on Instapaper</div>
+				</a>
+			</li>
+			<li class="sb-b-line">
+				<a data-share="line">
+					<div class="sb-icon fab fa-line"></div>
+					<div class="sb-label">Share on Line</div>
+				</a>
+			</li>
+			<li class="sb-b-linkedin">
+				<a data-share="linkedin">
+					<div class="sb-icon fab fa-linkedin-in"></div>
+					<div class="sb-label">Share on LinkedIn</div>
+				</a>
+			</li>
+			<li class="sb-b-livejournal">
+				<a data-share="livejournal">
+					<div class="sb-icon fas fa-pencil-alt"></div>
+					<div class="sb-label">Share on LiveJournal</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- End of sidebar markup code -->
+
+	<!-- Start of sidebar build code -->
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+
+			jQuery(".super-sidebar").superSidebar({
+				// Main
+				position: ["left", "center"],
+				offset: [0, 0],
+				buttonShape: "round",
+				buttonColor: "default",
+				buttonOverColor: "default",
+				iconColor: "white",
+				iconOverColor: "white",
+				labelEnabled: true,
+				labelColor: "match",
+				labelTextColor: "match",
+				labelEffect: "slide-out-fade",
+				labelAnimate: [400, "easeOutQuad"],
+				labelConnected: true,
+				sideSpace: true,
+				buttonSpace: true,
+				labelSpace: false,
+				// Other
+				showAfterPosition: false,
+				barAnimate: [250, "easeOutQuad"],
+				hideUnderWidth: false,
+				shareTarget: "default"
+			});
+
+		});
+	</script>
+	<!-- End of sidebar build code -->
+
+</body>
+</html>

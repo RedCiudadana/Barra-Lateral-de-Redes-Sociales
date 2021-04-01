@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Super Sidebar - Guide</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href="../Main/super-sidebar/font-awesome/css/all.min.css" type="text/css" rel="stylesheet">
+	<link href="../Main/super-sidebar/css/super-sidebar.min.css" type="text/css" rel="stylesheet">
+	<link href="assets/css/main.css" type="text/css" rel="stylesheet">
+	<link href="assets/rainbow/github.css" type="text/css" rel="stylesheet">
+	<script src="../Main/super-sidebar/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script src="assets/rainbow/rainbow-custom.min.js" type="text/javascript"></script>
+	<script src="assets/js/guide.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="head">
+		<div class="container clearfix">
+			<h1>Super Sidebar</h1>
+			<div id="version">v3.1.0</div>
+			<div id="email"><a href="mailto:contact@creativetier.com" target="_blank">contact@creativetier.com</a></div>
+		</div>
+	</div>
+	<div class="container">
+		<div id="contents">
+			<h2>Contents</h2>
+			<ul id="nav">
+				<li>
+					<a class="current" href="#install" target="_self">Install</a>
+					<ul class="subnav">
+						<li><a href="#detailed" target="_self">Detailed</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#customize" target="_self">Customize</a>
+					<ul class="subnav">
+						<li>
+							<a href="#buttons" target="_self">Buttons</a>
+							<ul class="subnav">
+								<li><a href="#share-button" target="_self">Share</a></li>
+								<li><a href="#link-button" target="_self">Link</a></li>
+								<li><a href="#special-button" target="_self">Special</a></li>
+								<li><a href="#window-button" target="_self">Window</a></li>
+								<li><a href="#subbar-button" target="_self">Subbar</a></li>
+							</ul>
+						</li>
+						<li><a href="#settings" target="_self">Settings</a></li>
+						<li><a href="#css-js-code" target="_self">CSS &amp; JS code</a></li>
+					</ul>
+				</li>
+				<li><a href="#problem" target="_self">Problem</a></li>
+				<li><a href="#contact" target="_self">Contact</a></li>
+				<li><a href="#credits" target="_self">Credits</a></li>
+			</ul>
+		</div>
+		<div id="body">
+			<div id="install" class="section">
+				<h3>Install</h3>
+				<p>All of the files that you need to work with are in the <span class="file">Main</span> folder. In order to install the sidebar on your html page, you will need to do the following steps:</p>
+				<p class="step">1. Copy the <span class="underline">sidebar assets folder</span>, "super-sidebar", and add it next to your html file.</p>
+				<p class="step">2. Copy the <span class="underline">sidebar html code</span> and add it to your html file:</p>
+				<div class="indent">
+					<p>Select a template and open it in a text editor.</p>
+					<p class="step small-space">a. Copy the <span class="underline">assets code</span> and add it at the end of the <span class="elem">&lt;head&gt;</span> tag on your html page.</p>
+					<p class="step">b. Copy the <span class="underline">markup code</span> and add it at the end of the <span class="elem">&lt;body&gt;</span> tag on your html page.</p>
+					<p class="step">c. Copy the <span class="underline">build code</span> and add it at the end of the <span class="elem">&lt;body&gt;</span> tag on your html page.</p>
+				</div>
+			</div>
+
+			<div id="detailed" class="section">
+				<h3>Detailed instructions</h3>
+				<p class="step bold">1. Copy the <span class="underline">sidebar assets folder</span>, "super-sidebar", and add it next to your html file.</p>
+				<p>This folder contains the files needed by the sidebar such as the CSS, JavaScript and icon files. The folder needs to be with your html file so that the sidebar can load the necessary assets.</p>
+
+				<p class="step bold">2. Copy the <span class="underline">sidebar html code</span> and add it to your html file:</p>
+				<p>There are multiple templates that the sidebar comes with, which provide a starting point in customizing it. Once you have decided which template to use, open the html file in a text editor (such as <a href="https://www.sublimetext.com" target="_blank">Sublime Text</a>).</p>
+				<p>After you open the file, you will see that the needed sidebar code is shown by comments:</p>
+
+				<div class="indent">
+					<p class="step bold">a. Copy the <span class="underline">assets code</span> and add it at the end of the <span class="elem">&lt;head&gt;</span> tag on your html page.</p>
+<pre><code data-language="html">&lt;!-- Start of sidebar assets code --&gt;
+&lt;link href=&quot;super-sidebar/css/super-sidebar.min.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href="super-sidebar/font-awesome/css/all.min.css" type="text/css" rel="stylesheet"&gt;
+&lt;script src=&quot;super-sidebar/js/jquery-3.4.1.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;super-sidebar/js/velocity.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;!-- &lt;link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"... --&gt;
+&lt;!-- &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js&quot;... --&gt;
+&lt;!-- &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js&quot;... --&gt;
+&lt;script src=&quot;super-sidebar/js/jquery.super-sidebar.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;!-- End of sidebar assets code --&gt;</code></pre>
+					<p>This code specifies the necessary files to be loaded by the page.</p>
+					<p>If you already have Font Awesome, jQuery or Velocity on the page, do not add them again. In this case, make sure they are added on the page before the sidebar JS file.</p>
+					<p>Commented out are alternative ways of loading Font Awesome, jQuery and Velocity, from CDNs (Content Delivery Networks). The reason why you would want this is because the loading times would be faster for the user if he were to load the files from a CDN server rather than from your own site. Or, if the user visited sites using the same practice, he might already have the files already cached in his browser. I have added these as a useful option for people who want them, but I have not enabled them by default because it will always require an Internet connection to preview the sidebar. But, when deploying it on the web, it is a good idea to use these faster loading options instead.</p>
+
+					<p class="step bold">b. Copy the <span class="underline">markup code</span> and add it at the end of the <span class="elem">&lt;body&gt;</span> tag on your html page.</p>
+<pre><code data-language="html">&lt;!-- Start of sidebar markup code --&gt;
+&lt;div class=&quot;super-sidebar&quot;&gt;
+    &lt;ul class=&quot;sb-bar&quot;&gt;
+        &lt;li class=&quot;sb-b-facebook&quot;&gt;
+            &lt;a data-share=&quot;facebook&quot;&gt;
+                &lt;div class=&quot;sb-icon fab fa-facebook-f&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;sb-label&quot;&gt;Share on Facebook&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    ...
+&lt;/div&gt;
+&lt;!-- End of sidebar markup code --&gt;</code></pre>
+					<p>This is the bulk of the sidebar html code and it specifies all of the content of the sidebar, such as buttons, labels and windows content.</p>
+					<p>After you are done with the installation, you should look over the <a href="#buttons">Buttons</a> section to learn how to customize this code.</p>
+
+					<p class="step bold">c. Copy the <span class="underline">build code</span> and add it at the end of the <span class="elem">&lt;body&gt;</span> tag on your html page.</p>
+<pre><code data-language="html">&lt;!-- Start of sidebar build code --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    jQuery(document).ready(function() {
+
+        jQuery(&quot;.super-sidebar&quot;).superSidebar({
+            // Main
+            position: [&quot;left&quot;, &quot;center&quot;],
+            offset: [0, 0],
+            buttonShape: &quot;square&quot;,
+            ...
+        });
+
+    });
+&lt;/script&gt;
+&lt;!-- End of sidebar build code --&gt;</code></pre>
+					<p>This is the JavaScript code that builds the sidebar functionality by calling the plugin and passing the settings to it.</p>
+					<p>To see all of the available settings, their meanings and possible values, see the <a href="#settings">Settings</a> table.</p>
+				</div>
+
+				<p class="space">Now that you have the sidebar up and running on your page, you can start to customize it as you like.</p>
+			</div>
+
+			<div id="customize" class="section">
+				<h3>Customize</h3>
+				<p>When customizing the sidebar, you can change the HTML markup code to customize the content (buttons, subbars, windows), you can change the settings to customize the functionality, you can edit the CSS file to change anything about the look that you want and, for more advanced users, you can also edit the sidebar JavaScript file.</p>
+			</div>
+			
+			<div id="buttons" class="section">
+				<h3>Buttons</h3>
+				<p>A button of the sidebar can be of multiple types:</p>
+				<ul class="slist">
+					<li><span><span class="bold">Share</span>: Shares the page on a service, such as a social network.</span></li>
+					<li><span><span class="bold">Link</span>: Links to a page, such as the profile page on a site.</span></li>
+					<li><span><span class="bold">Special</span>: Has a special function on click.</span></li>
+					<li><span><span class="bold">Window</span>: Opens an overlay window.</span></li>
+					<li><span><span class="bold">Subbar</span>: Opens a sublist of buttons.</span></li>
+				</ul>
+
+				<p class="space">The markup code for a button is an <span class="elem">&lt;li&gt;</span> element inside <span class="elem">&lt;ul <span class="attr">class=</span><span class="val">"sb-bar"</span>&gt;</span> or the <span class="elem">&lt;ul&gt;</span> of a subbar button:</p>
+<pre><code data-language="html">&lt;ul class=&quot;sb-bar&quot;&gt;
+    &lt;li class=&quot;sb-b-facebook&quot;&gt;
+        &lt;a data-share=&quot;facebook&quot;&gt;
+            &lt;div class=&quot;sb-icon fab fa-facebook-f&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;sb-label&quot;&gt;Share on Facebook&lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;</code></pre>
+
+				<h4>Button color</h4>
+				<p>The color of the button (and the label) is controlled by the <span class="val">sb-b-facebook</span> class of the <span class="elem">&lt;li&gt;</span> element:</p>
+<pre><code data-language="html">&lt;li class=&quot;sb-b-facebook&quot;&gt;
+    ...
+&lt;/li&gt;</code></pre>
+				<p class="space">If the color for the button that you want is not available by default, you can add it yourself in the CSS code:</p>
+<pre><code data-language="css">.sb-b-facebook .sb-icon,
+.sb-b-facebook a:hover .sb-icon,
+.sb-b-facebook .sb-label {
+    color: #3b5998;
+    background-color: #3b5998;
+}</code></pre>
+				<p>You can use a site such as <a href="https://brandcolors.net" target="_blank">brandcolors.net</a> to find the color code for the service that you want.</p>
+
+				<h4>Font Awesome icons</h4>
+				<p>The button icon is controlled by the <span class="val">fa-facebook</span> class of the <span class="val">sb-icon</span> element:</p>
+<pre><code data-language="html">&lt;div class=&quot;sb-icon fab fa-facebook-f&quot;&gt;&lt;/div&gt;</code></pre>
+				<p>The sidebar uses <a href="http://fontawesome.com" target="_blank">Font Awesome</a> which has available over 1500 free icons that can be used.</p>
+				<p>You can view all of the available icons here: <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">https://fontawesome.com/icons?d=gallery&m=free</a>.</p>
+
+				<h4>Custom image icons</h4>
+				<p>Additionally, the buttons support using custom images as icons as well:</p>
+<pre><code data-language="html">&lt;div class=&quot;sb-icon&quot;&gt;
+    &lt;img src=&quot;super-sidebar/images/icons/facebook.png&quot; alt=&quot;Facebook icon&quot;&gt;
+&lt;/div&gt;</code></pre>
+			</div>
+
+			<div id="share-button" class="section">
+				<h3>Share button</h3>
+				<p>A share button shares the current page on a service, such as a social network.</p>
+				<p>The following is the markup code of a share button:</p>
+<pre><code data-language="html">&lt;li class=&quot;sb-b-facebook&quot;&gt;
+    &lt;a data-share=&quot;facebook&quot;&gt;
+        &lt;div class=&quot;sb-icon fab fa-facebook-f&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sb-label&quot;&gt;Share on Facebook&lt;/div&gt;
+    &lt;/a&gt;
+&lt;/li&gt;</code></pre>
+				<ul class="slist space">
+					<li><span>The <span class="val">sb-b-facebook</span> class specifies the color of the button and the label. This is defined in the CSS file.</li>
+					<li><span>The <span class="attr">data-share</span> attribute specifies the service on which the page should be shared.</span></li>
+					<li><span>The <span class="val">fab fa-facebook-f</span> classes specify the button icon from the <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">Font Awesome library</a>.</span></li>
+					<li><span>The <span class="val">sb-label</span> element contains the button label that is displayed on mouseover. The label is optional and the element can be removed if not necessary.</span></li>
+				</ul>
+
+				<h4 id="add-share-service">Add a share service</h4>
+				<p>Apart from the default share services, you can add new ones through the JS settings:</p>
+<pre><code data-language="javascript">shareServices: {
+    "facebook": {
+        type: "popup",
+        url: "https://www.facebook.com/sharer.php?u={URL}",
+        window: {width: 700, height: 450, top: 200, left: "{CENTER}"}
+    }
+}</code></pre>
+				<ul class="slist space">
+					<li><span>The <span class="val">"facebook"</span> string is the name of the service. This will be used in the <span class="attr">data-share</span> attribute of the buttons</span>.</li>
+					<li><span>
+						The <span class="prop">type</span> property specifies the type of the share functionality:
+						<ul>
+							<li><span><span class="jsval">"popup"</span>: Open in a popup window.</span></li>
+							<li><span><span class="jsval">"blank"</span>: Open in a new window.</span></li>
+						</ul>
+					</span></li>
+					<li>
+						<span>The <span class="prop">url</span> property is the share URL specific to the service that you want to add.
+						<br>This can contain 2 special strings, <span class="val">{URL}</span> and <span class="val">{TITLE}</span>, that the sidebar will replace with the page URL and the page title respectively.</span>
+					</li>
+					<li><span>
+						The <span class="prop">window</span> propery contains the popup window parameters.
+						<ul>
+							<li><span>For <span class="prop">top</span> and <span class="prop">left</span>, the special string <span class="val">{CENTER}</span> can be used to center the popup vertically and horizontally in relation to the screen.</span></li>
+							<li><span class="italic">Applicable only for <span class="prop">type: </span> <span class="jsval">"popup"</span>.</span></li>
+						</ul>
+					</span></li>
+				</ul>
+
+				<h4>Default share butons</h4>
+				<p>The sidebar comes with the following default buttons and sharing support for the associated services:</p>
+				
+				<ul class="b-list clearfix">
+					<li>
+						<div class="b-button sb-b-blogger">
+							<div class="sb-icon fab fa-blogger-b"></div>
+							<div class="b-label">Blogger</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-buffer">
+							<div class="sb-icon fab fa-buffer"></div>
+							<div class="b-label">Buffer</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-diaspora">
+							<div class="sb-icon fab fa-diaspora"></div>
+							<div class="b-label">Diaspora</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-digg">
+							<div class="sb-icon fab fa-digg"></div>
+							<div class="b-label">Digg</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-douban">
+							<div class="sb-icon fas fa-user"></div>
+							<div class="b-label">Douban</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-email">
+							<div class="sb-icon fas fa-at"></div>
+							<div class="b-label">Email</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-evernote">
+							<div class="sb-icon fab fa-evernote"></div>
+							<div class="b-label">Evernote</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-facebook">
+							<div class="sb-icon fab fa-facebook-f"></div>
+							<div class="b-label">Facebook</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-flipboard">
+							<div class="sb-icon fab fa-flipboard"></div>
+							<div class="b-label">Flipboard</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-google-bookmarks">
+							<div class="sb-icon fab fa-google"></div>
+							<div class="b-label">Google Bookmarks</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-hacker-news">
+							<div class="sb-icon fab fa-hacker-news"></div>
+							<div class="b-label">Hacker News</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-instapaper">
+							<div class="sb-icon fas fa-italic"></div>
+							<div class="b-label">Instapaper</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-line">
+							<div class="sb-icon fab fa-line"></div>
+							<div class="b-label">Line</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-linkedin">
+							<div class="sb-icon fab fa-linkedin-in"></div>
+							<div class="b-label">LinkedIn</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-livejournal">
+							<div class="sb-icon fas fa-pencil-alt"></div>
+							<div class="b-label">LiveJournal</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-okru">
+							<div class="sb-icon fas fa-child"></div>
+							<div class="b-label">OKru</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-pinterest">
+							<div class="sb-icon fab fa-pinterest"></div>
+							<div class="b-label">Pinterest</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-pocket">
+							<div class="sb-icon fab fa-get-pocket"></div>
+							<div class="b-label">Pocket</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-qzone">
+							<div class="sb-icon fas fa-star"></div>
+							<div class="b-label">QZone</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-reddit">
+							<div class="sb-icon fab fa-reddit-alien"></div>
+							<div class="b-label">Reddit</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-renren">
+							<div class="sb-icon fab fa-renren"></div>
+							<div class="b-label">Renren</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-skype">
+							<div class="sb-icon fab fa-skype"></div>
+							<div class="b-label">Skype</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-telegram">
+							<div class="sb-icon fab fa-telegram-plane"></div>
+							<div class="b-label">Telegram</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-tumblr">
+							<div class="sb-icon fab fa-tumblr"></div>
+							<div class="b-label">Tumblr</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-twitter">
+							<div class="sb-icon fab fa-twitter"></div>
+							<div class="b-label">Twitter</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-vk">
+							<div class="sb-icon fab fa-vk"></div>
+							<div class="b-label">VK</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-weibo">
+							<div class="sb-icon fab fa-weibo"></div>
+							<div class="b-label">Weibo</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-xing">
+							<div class="sb-icon fab fa-xing"></div>
+							<div class="b-label">Xing</div>
+						</div>
+					</li>
+				</ul>
+
+				<p>You can find the template code for them in the <span class="file">share-buttons-1.html</span> - <span class="file">share-buttons-2.html</span> files.</p>
+				
+				<p class="space">If you have a request for a new service to be added, <a href="#contact" target="_self">contact me</a> and let me know and I will try to add it in the next update that I make.</p>
+			</div>
+
+			<div id="link-button" class="section">
+				<h3>Link button</h3>
+				<p>A link button simply links to a page, such as the profile page on a site.</p>
+				<p>The following is the markup code of a link button:</p>
+<pre><code data-language="html">&lt;li class=&quot;sb-b-facebook&quot;&gt;
+    &lt;a href=&quot;http://www.facebook.com&quot; target=&quot;_blank&quot;&gt;
+        &lt;div class=&quot;sb-icon fab fa-facebook-f&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sb-label&quot;&gt;/SuperCompany&lt;/div&gt;
+    &lt;/a&gt;
+&lt;/li&gt;</code></pre>
+				<ul class="slist space">
+					<li><span>The <span class="val">sb-b-facebook</span> class specifies the color of the button and the label. This is defined in the CSS file.</span></li>
+					<li><span>The <span class="attr">href</span> attribute specifies the link to be opened on click and the <span class="attr">target</span> attribute specifies if it should be opened in a new window or in the same window.</span></li>
+					<li><span>The <span class="val">fab fa-facebook-f</span> classes specify the button icon from the <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">Font Awesome library</a>.</span></li>
+					<li><span>The <span class="val">sb-label</span> element contains the button label that is displayed on mouseover. The label is optional and the element can be removed if not necessary.</span></li>
+				</ul>
+
+				<h4>Default link buttons</h4>
+				<p>The sidebar comes with the following default buttons that can be used as links:</p>
+				
+				<ul class="b-list clearfix">
+					<li>
+						<div class="b-button sb-b-airbnb">
+							<div class="sb-icon fab fa-airbnb"></div>
+							<div class="b-label">Airbnb</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-amazon">
+							<div class="sb-icon fab fa-amazon"></div>
+							<div class="b-label">Amazon</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-android">
+							<div class="sb-icon fab fa-android"></div>
+							<div class="b-label">Android</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-audible">
+							<div class="sb-icon fab fa-audible"></div>
+							<div class="b-label">Audible</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-bandcamp">
+							<div class="sb-icon fab fa-bandcamp"></div>
+							<div class="b-label">Bandcamp</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-behance">
+							<div class="sb-icon fab fa-behance"></div>
+							<div class="b-label">Behance</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-bitcoin">
+							<div class="sb-icon fab fa-bitcoin"></div>
+							<div class="b-label">Bitcoin</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-blogger">
+							<div class="sb-icon fab fa-blogger-b"></div>
+							<div class="b-label">Blogger</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-buffer">
+							<div class="sb-icon fab fa-buffer"></div>
+							<div class="b-label">Buffer</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-deviantart">
+							<div class="sb-icon fab fa-deviantart"></div>
+							<div class="b-label">DeviantArt</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-diaspora">
+							<div class="sb-icon fab fa-diaspora"></div>
+							<div class="b-label">Diaspora</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-digg">
+							<div class="sb-icon fab fa-digg"></div>
+							<div class="b-label">Digg</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-discord">
+							<div class="sb-icon fab fa-discord"></div>
+							<div class="b-label">Discord</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-douban">
+							<div class="sb-icon fas fa-user"></div>
+							<div class="b-label">Douban</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-dribbble">
+							<div class="sb-icon fab fa-dribbble"></div>
+							<div class="b-label">Dribbble</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-dropbox">
+							<div class="sb-icon fab fa-dropbox"></div>
+							<div class="b-label">Dropbox</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-ebay">
+							<div class="sb-icon fab fa-ebay"></div>
+							<div class="b-label">Ebay</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-etsy">
+							<div class="sb-icon fab fa-etsy"></div>
+							<div class="b-label">Etsy</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-evernote">
+							<div class="sb-icon fab fa-evernote"></div>
+							<div class="b-label">Evernote</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-facebook">
+							<div class="sb-icon fab fa-facebook-f"></div>
+							<div class="b-label">Facebook</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-flickr">
+							<div class="sb-icon fab fa-flickr"></div>
+							<div class="b-label">Flickr</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-flipboard">
+							<div class="sb-icon fab fa-flipboard"></div>
+							<div class="b-label">Flipboard</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-foursquare">
+							<div class="sb-icon fab fa-foursquare"></div>
+							<div class="b-label">Foursquare</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-github">
+							<div class="sb-icon fab fa-github"></div>
+							<div class="b-label">Github</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-goodreads">
+							<div class="sb-icon fab fa-goodreads-g"></div>
+							<div class="b-label">Goodreads</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-google-bookmarks">
+							<div class="sb-icon fab fa-google"></div>
+							<div class="b-label">Google Bookmarks</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-google-drive">
+							<div class="sb-icon fab fa-google-drive"></div>
+							<div class="b-label">Google Drive</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-google-play">
+							<div class="sb-icon fab fa-google-play"></div>
+							<div class="b-label">Google Play</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-hacker-news">
+							<div class="sb-icon fab fa-hacker-news"></div>
+							<div class="b-label">Hacker News</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-instagram">
+							<div class="sb-icon fab fa-instagram"></div>
+							<div class="b-label">Instagram</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-instapaper">
+							<div class="sb-icon fas fa-italic"></div>
+							<div class="b-label">Instapaper</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-itunes">
+							<div class="sb-icon fab fa-itunes-note"></div>
+							<div class="b-label">iTunes</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-kickstarter">
+							<div class="sb-icon fab fa-kickstarter-k"></div>
+							<div class="b-label">Kickstarter</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-line">
+							<div class="sb-icon fab fa-line"></div>
+							<div class="b-label">Line</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-linkedin">
+							<div class="sb-icon fab fa-linkedin-in"></div>
+							<div class="b-label">LinkedIn</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-livejournal">
+							<div class="sb-icon fas fa-pencil-alt"></div>
+							<div class="b-label">LiveJournal</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-medium">
+							<div class="sb-icon fab fa-medium-m"></div>
+							<div class="b-label">Medium</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-myspace">
+							<div class="sb-icon fas fa-user"></div>
+							<div class="b-label">MySpace</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-okru">
+							<div class="sb-icon fas fa-child"></div>
+							<div class="b-label">OKru</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-patreon">
+							<div class="sb-icon fab fa-patreon"></div>
+							<div class="b-label">Patreon</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-paypal">
+							<div class="sb-icon fab fa-paypal"></div>
+							<div class="b-label">PayPal</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-periscope">
+							<div class="sb-icon fab fa-periscope"></div>
+							<div class="b-label">Periscope</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-pinterest">
+							<div class="sb-icon fab fa-pinterest"></div>
+							<div class="b-label">Pinterest</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-pocket">
+							<div class="sb-icon fab fa-get-pocket"></div>
+							<div class="b-label">Pocket</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-qq">
+							<div class="sb-icon fab fa-qq"></div>
+							<div class="b-label">QQ</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-qzone">
+							<div class="sb-icon fas fa-star"></div>
+							<div class="b-label">QZone</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-reddit">
+							<div class="sb-icon fab fa-reddit-alien"></div>
+							<div class="b-label">Reddit</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-stack-overflow">
+							<div class="sb-icon fab fa-stack-overflow"></div>
+							<div class="b-label">Stack Overflow</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-renren">
+							<div class="sb-icon fab fa-renren"></div>
+							<div class="b-label">Renren</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-skype">
+							<div class="sb-icon fab fa-skype"></div>
+							<div class="b-label">Skype</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-slack">
+							<div class="sb-icon fab fa-slack"></div>
+							<div class="b-label">Slack</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-slideshare">
+							<div class="sb-icon fab fa-slideshare"></div>
+							<div class="b-label">SlideShare</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-snapchat">
+							<div class="sb-icon fab fa-snapchat"></div>
+							<div class="b-label">Snapchat</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-soundcloud">
+							<div class="sb-icon fab fa-soundcloud"></div>
+							<div class="b-label">SoundCloud</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-stack-overflow">
+							<div class="sb-icon fab fa-stack-overflow"></div>
+							<div class="b-label">Stack Overflow</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-steam">
+							<div class="sb-icon fab fa-steam-symbol"></div>
+							<div class="b-label">Steam</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-telegram">
+							<div class="sb-icon fab fa-telegram-plane"></div>
+							<div class="b-label">Telegram</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-tumblr">
+							<div class="sb-icon fab fa-tumblr"></div>
+							<div class="b-label">Tumblr</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-twitch">
+							<div class="sb-icon fab fa-twitch"></div>
+							<div class="b-label">Twitch</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-twitter">
+							<div class="sb-icon fab fa-twitter"></div>
+							<div class="b-label">Twitter</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-uber">
+							<div class="sb-icon fab fa-uber"></div>
+							<div class="b-label">Uber</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-vimeo">
+							<div class="sb-icon fab fa-vimeo-v"></div>
+							<div class="b-label">Vimeo</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-vk">
+							<div class="sb-icon fab fa-vk"></div>
+							<div class="b-label">VK</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-weibo">
+							<div class="sb-icon fab fa-weibo"></div>
+							<div class="b-label">Weibo</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-wikipedia">
+							<div class="sb-icon fab fa-wikipedia-w"></div>
+							<div class="b-label">Wikipedia</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-wordpress">
+							<div class="sb-icon fab fa-wordpress-simple"></div>
+							<div class="b-label">WordPress</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-xing">
+							<div class="sb-icon fab fa-xing"></div>
+							<div class="b-label">Xing</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-yahoo">
+							<div class="sb-icon fab fa-yahoo"></div>
+							<div class="b-label">Yahoo</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-yelp">
+							<div class="sb-icon fab fa-yelp"></div>
+							<div class="b-label">Yelp</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-youtube">
+							<div class="sb-icon fab fa-youtube"></div>
+							<div class="b-label">YouTube</div>
+						</div>
+					</li>
+				</ul>
+
+				<p>You can find the template code for them in the <span class="file">link-buttons-1.html</span> - <span class="file">link-buttons-5.html</span> files.</p>
+			</div>
+
+			<div id="special-button" class="section">
+				<h3>Special button</h3>
+				<p>A special button has a particular function when it is clicked.</p>
+				<p>The markup code is similar to other buttons except the <span class="attr">href</span> attribute which specifies the special function:</p>
+<pre><code data-language="html">&lt;li class=&quot;sb-b-contact&quot;&gt;
+    &lt;a href=&quot;mailto:contact@mysite.com&quot; target=&quot;_blank&quot;&gt;
+        &lt;div class=&quot;sb-icon fas fa-envelope&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sb-label&quot;&gt;Email us&lt;/div&gt;
+    &lt;/a&gt;
+&lt;/li&gt;</code></pre>
+				<ul class="slist space">
+					<li><span>The <span class="val">sb-b-contact</span> class specifies the color of the button and the label. This is defined in the CSS file.</span></li>
+					<li><span>The <span class="attr">href</span> attribute specifies the special function of the button.</span></li>
+					<li><span>The <span class="val">fas fa-envelope</span> classes specify the button icon from the <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">Font Awesome library</a>.</span></li>
+					<li><span>The <span class="val">sb-label</span> element contains the button label that is displayed on mouseover. The label is optional and the element can be removed if not necessary.</span></li>
+				</ul>
+
+				<h4>Default special buttons:</h4>
+				<p>The sidebar comes with 2 default special buttons:</p>
+
+				<ul class="b-list b-hlist clearfix">
+					<li>
+						<div class="b-button sb-b-contact">
+							<div class="sb-icon fas fa-envelope"></div>
+							<div class="b-label">Email</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-print">
+							<div class="sb-icon fas fa-print"></div>
+							<div class="b-label">Print</div>
+						</div>
+					</li>
+				</ul>
+
+				<p>You can find the template code for them in the <span class="file">special-buttons.html</span> file.</p>
+			</div>
+
+			<div id="window-button" class="section">
+				<h3>Window button</h3>
+				<p>A window button links to an overlay window that opens over the page.</p>
+				<p>The following is the markup code of a window button:</p>
+<pre><code data-language="html">&lt;li class=&quot;sb-b-contact&quot;&gt;
+    &lt;a href=&quot;#super-sidebar-contact&quot; target=&quot;_self&quot;&gt;
+        &lt;div class=&quot;sb-icon fas fa-envelope&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sb-label&quot;&gt;Contact form&lt;/div&gt;
+    &lt;/a&gt;
+&lt;/li&gt;</code></pre>
+				<ul class="slist space">
+					<li><span>The <span class="val">sb-b-contact</span> class specifies the button color. This is defined in the CSS file.</span></li>
+					<li><span>The <span class="val">#super-sidebar-contact</span> is the window id and specifies that this button links to a window as opposed to another page.</span></li>
+					<li><span>The <span class="val">fas fa-envelope</span> classes specify the button icon from the <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">Font Awesome library</a>.</span></li>
+					<li><span>The <span class="val">sb-label</span> element contains the button label that is displayed on mouseover. The label is optional and the element can be removed if not necessary.</span></li>
+				</ul>
+
+				<h4>Window markup code</h4>
+				<p>The markup code of a window goes in the <span class="elem">&lt;div <span class="attr">class=</span><span class="val">"sb-overlay"</span>&gt;</span> element.</p>
+				<p>If there are no windows used, this element can be removed.</p>
+
+				<p class="space">The following is the markup code of a window:</p>
+<pre><code data-language="html">&lt;div id=&quot;super-sidebar-contact&quot; class=&quot;sb-window&quot;&gt;
+    &lt;div class=&quot;sb-head&quot;&gt;
+        &lt;div class=&quot;sb-title&quot;&gt;CONTACT&lt;/div&gt;
+        &lt;div class=&quot;sb-close&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sb-body&quot;&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				<ul class="slist space">
+					<li><span>The <span class="val">super-sidebar-contact</span> is the unique id of the window.</span></li>
+					<li><span>The <span class="val">sb-title</span> element contains the title that appears in the window header.</span></li>
+					<li><span>The <span class="val">sb-body</span> element contains the content of the window. This can be any html content.</span></li>
+					<li><span>In the Settings table you can find different <a href="#settings-window">window settings</a>.</span></li>
+				</ul>
+
+				<h5>Window size</h5>
+				<p>Additionally, the window element can contain any of the following classes, in order to set a width dimension:</p>
+				<ul class="small-list">
+					<li><span><span class="val">sb-normal-window</span>: 500px</span></li>
+					<li><span><span class="val">sb-big-window</span>: 700px</span></li>
+					<li><span><span class="val">sb-large-window</span>: 1000px</span></li>
+					<li><span><span class="val">sb-large-window</span>: 400px</span></li>
+				</ul>
+<pre class="space"><code data-language="html">&lt;div id=&quot;super-sidebar-contact&quot; class=&quot;sb-window sb-normal-window&quot;&gt;</code></pre>
+
+				<p class="space">Or you can set a custom size in the CSS code using the window ID:</p>
+<pre><code data-language="css">#super-sidebar-contact {
+    max-width: 420px;
+}</code></pre>
+
+				<h5>Window position</h5>
+				<p>The position of the windows is set from the <a href="#settings-window">windowPosition</a> <span class="prop"></span> JS setting but it is possible for each window to override the general setting and have a different position, by using the <span class="attr">data-position</span> attribute:</p>
+<pre><code data-language="html">&lt;div id=&quot;super-sidebar-contact&quot; ... data-position=&quot;center-top&quot;&gt;</code></pre>
+				<p>The possible values are similar to the setting values.</p>
+
+				<p class="big-space">The same applies for the <a href="#settings-window">windowOffset</a> setting, using the <span class="attr">data-offset</span> attribute:</p>
+<pre><code data-language="html">&lt;div id=&quot;super-sidebar-contact&quot; ... data-offset=&quot;10-20&quot;&gt;</code></pre>
+
+				<h4 id="window-form">Window form</h4>
+				<p>Among other content, a window can contain a form that will be handled by the sidebar plugin itself:</p>
+<pre><code data-language="html">&lt;form class=&quot;sb-form&quot; action=&quot;super-sidebar/php/contact.php&quot; data-id=&quot;contact&quot;&gt;
+    &lt;label&gt;Your name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; required&gt;
+    ...
+    &lt;div class=&quot;sb-submit&quot;&gt;Send message&lt;/div&gt;
+    &lt;div class=&quot;sb-status&quot;&gt;&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+				<ul class="slist space">
+					<li><span>The <span class="val">sb-form</span> class specifies that this is a sidebar form and should be handled by the plugin.</span></li>
+					<li><span>The <span class="attr">action</span> attribute specifies the file that will process the form when submitted.</span></li>
+					<li><span>The <span class="attr">data-id</span> attribute specifies the unique id of the form. This can be used in the settings to pass data to it.</span></li>
+					<li><span>The form can contain regular HTML form elements.</span></li>
+					<li><span>The <span class="attr">required</span> attribute specifies that this field is required.</span></li>
+					<li><span>The <span class="val">sb-submit</span> element will submit the form when clicked.</span></li>
+					<li><span>
+						The <span class="val">sb-status</span> element shows different status messages (error, working, success, etc).
+						<br>These messages can be customized for each form through the settings. For more information, see below.
+					</span></li>
+					<li><span>The data is submitted to the processing file using the POST method.</span></li>
+				</ul>
+
+				<h5>Form data</h5>
+				<p>Using the settings, it is possible to pass data to the form:</p>
+<pre><code data-language="javascript">formData: {
+    "contact": {
+        post: {
+            test: "something",
+            other: "other value",
+            ...
+        },
+        status: {
+            empty: "Please fill all of the required fields.",
+            badEmail: "The email format is incorrect.",
+            working: "Sending message, please wait...",
+            success: "The message was successfully sent!",
+            error: "There was an error! The message was not sent."
+        }
+    }
+}</code></pre>
+				<ul class="slist space">
+					<li><span>The <span class="val">"contact"</span> string is the unique id of the form. This is the one specified in the <span class="attr">data-id</span> attribute.</span></li>
+					<li><span>
+						The <span class="prop">post</span> property contains other values that should be submitted to the processing file alongside the form values.
+						<br>This is optional and can be ommited if there is no other data which should be submitted.
+					</span></li>
+					<li><span>
+						The <span class="prop">status</span> property specifies the different status messages of the form.
+						<br>This is also optional. If there are no status messages specified for the form, the default status messages will be used instead.
+					</span></li>
+				</ul>
+
+				<h5>Processing file response</h5>
+				<p>Once the file processing the form has done its job, it should send a response back with the following JSON format:</p>
+				<p class="italic">Success response:</p>
+<pre><code data-language="javascript">{
+    status: true
+}</code></pre>
+				<ul class="slist">
+					<li><span>It can also contain a <span class="prop">message</span> but this is optional, since a success message is already defined.</span></li>
+				</ul>
+
+				<p class="italic space">Error response:</p>
+<pre><code data-language="javascript">{
+    status: false,
+    message: "Error message here."
+}</code></pre>
+				<ul class="slist">
+					<li><span>The <span class="prop">message</span> is optional, since a general error message is already available, but it is best to send back a specific error message about what went wrong.</span></li>
+				</ul>
+
+				<h4>Default window buttons</h4>
+				<p>The sidebar comes with 3 default window buttons and respective content templates:</p>
+
+				<ul class="b-list b-hlist clearfix">
+					<li>
+						<div class="b-button sb-b-about">
+							<div class="sb-icon fas fa-id-card"></div>
+							<div class="b-label">About</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-newsletter">
+							<div class="sb-icon fas fa-newspaper"></div>
+							<div class="b-label">Newsletter</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-contact">
+							<div class="sb-icon fas fa-envelope"></div>
+							<div class="b-label">Contact</div>
+						</div>
+					</li>
+				</ul>
+
+				<p>You can find the template code for them in the <span class="file">window-buttons.html</span> file.</p>
+			</div>
+
+			<div id="subbar-button" class="section">
+				<h3>Subbar button</h3>
+				<p>A subbar buttons opens another list of buttons on mouseover.</p>
+				<p>The following is the markup code of a subbar button:</p>
+<pre><code data-language="html">&lt;li class=&quot;sb-sub sb-b-social&quot;&gt;
+    &lt;div class=&quot;sb-icon fas fa-share-alt&quot;&gt;&lt;/div&gt;
+    &lt;ul class=&quot;sb-subbar&quot;&gt;
+        &lt;li class=&quot;sb-b-facebook&quot;&gt;
+            &lt;a data-share=&quot;facebook&quot;&gt;
+                &lt;div class=&quot;sb-icon fab fa-facebook-f&quot;&gt; &lt;/div&gt;
+                &lt;div class=&quot;sb-label&quot;&gt;Share on Facebook&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        ...
+    &lt;/ul&gt;
+&lt;/li&gt;</code></pre>
+				<ul class="slist space">
+					<li><span>The <span class="val">sb-sub</span> class specifies that this is a subbar button.</span></li>
+					<li><span>The <span class="val">sb-b-social</span> class specifies the button color. This is defined in the CSS file.</span></li>
+					<li><span>The <span class="val">fas fa-share-alt</span> classes specify the button icon from the <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">Font Awesome library</a>.</span></li>
+					<li><span>The <span class="elem">&lt;ul&gt;</span> element contains the list of buttons that is displayed on mouseover.</span></li>
+					<li><span>In the Settings table you can find different <a href="#settings-subbar">subbar settings</a>.</span></li>
+				</ul>
+
+				<h4>Default subbar buttons</h4>
+				<p>The sidebar comes with 2 default subbar buttons:</p>
+
+				<ul class="b-list b-hlist clearfix">
+					<li>
+						<div class="b-button sb-b-social">
+							<div class="sb-icon fas fa-share-alt"></div>
+							<div class="b-label">Social</div>
+						</div>
+					</li>
+					<li>
+						<div class="b-button sb-b-info">
+							<div class="sb-icon fas fa-info"></div>
+							<div class="b-label">Info</div>
+						</div>
+					</li>
+				</ul>
+
+				<p>You can find the template code for them in the <span class="file">subbar-buttons.html</span> file.</p>
+			</div>
+
+			<div id="settings" class="section">
+				<h3>Settings</h3>
+				<p>These are settings that you place in the JavaScript build code:</p>
+<pre><code data-language="javascript">jQuery(&quot;.super-sidebar&quot;).superSidebar({
+    // Main
+    position: [&quot;left&quot;, &quot;25%&quot;],
+    offset: [0, 0],
+    buttonShape: &quot;square&quot;,
+    ...
+});</code></pre>
+				<p>The table below shows all of the settings that are available, their default and possible values, as well as a description about each. It is not necessary to specify all of the settings in the build code. When a setting is not specified, it will automatically take the default value.</p>
+
+				<table id="stable" cellspacing="0">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Default value</th>
+							<th>Possible values</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="comment-row">
+							<td colspan="3">// Main</td>
+						</tr>
+						<tr class="name-row">
+							<td>position</td>
+							<td>["left", "center"]</td>
+							<td>[&lt;horizontal&gt;, &lt;vertical&gt;], ["left", "center"], [10, 20]</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The position of the sidebar. The format is <span class="tval">[&lt;horizontal&gt;, &lt;vertical&gt;]</span>. Horizontal values are <span class="tval">"left"</span> and <span class="tval">"right"</span> and the vertical values are <span class="tval">"top"</span>, <span class="tval">"center"</span> and <span class="tval">"bottom"</span>.</p>
+								<p>Additionally, the values can be exact numbers like <span class="tval">10</span> (px) or percentages like <span class="tval">"20%"</span>.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>offset</td>
+							<td>[0, 0]</td>
+							<td>[&lt;horizontal&gt;, &lt;vertical&gt;], [10, 20]</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The offset in position starting from the <span class="tname">position</span> setting. These values are added to the positions calculated previously.</p>
+								<p>The format is <span class="tval">[&lt;horizontal&gt;, &lt;vertical&gt;]</span> where the values are numbers.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>buttonShape</td>
+							<td>"round"</td>
+							<td>"square", "round", "rounded", "rounded-out"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The shape of the buttons. It also determines the shape of the labels.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>buttonColor</td>
+							<td>"default"</td>
+							<td>"default", "blue", "red", "yellow", "green", "white", "black"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The color of the buttons.</p>
+								<p class="tinfo">These are only a few default color options, you can edit the CSS code and add any colors you want.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>buttonOverColor</td>
+							<td>"default"</td>
+							<td>"default", "blue", "red", "yellow", "green", "white", "black"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The color of the buttons on mouseover.</p>
+								<p class="tinfo">These are only a few default color options, you can edit the CSS code and add any colors you want.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>iconColor</td>
+							<td>"white"</td>
+							<td>"default", "blue", "red", "yellow", "green", "white", "black"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The color of the button icons.</p>
+								<p class="tinfo">These are only a few default color options, you can edit the CSS code and add any colors you want.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>iconOverColor</td>
+							<td>"white"</td>
+							<td>"default", "blue", "red", "yellow", "green", "white", "black"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The color of the button icons on mouseover.</p>
+								<p class="tinfo">These are only a few default color options, you can edit the CSS code and add any colors you want.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>labelEnabled</td>
+							<td>true</td>
+							<td>true, false</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>If the button labels should be enabled.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>labelColor</td>
+							<td>"match"</td>
+							<td>"default", "blue", "red", "yellow", "green", "white", "black", "match"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The color of the button labels.</p>
+								<p>If set to <span class="tval">"match"</span>, it will correspond with <span class="tname">buttonOverColor</span>.</p>
+								<p class="tinfo">These are only a few default color options, you can edit the CSS code and add any colors you want.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>labelTextColor</td>
+							<td>"match"</td>
+							<td>"default", "blue", "red", "yellow", "green", "white", "black", "match"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The color of the button labels text.</p>
+								<p>If set to <span class="tval">"match"</span>, it will correspond with <span class="tname">iconOverColor</span>.</p>
+								<p class="tinfo">These are only a few default color options, you can edit the CSS code and add any colors you want.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>labelEffect</td>
+							<td>"slide-out-fade"</td>
+							<td>"fade", "slide-out", "slide-out-fade", "slide-in", "slide-out-out", "slide-in-in", "none"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The appearance effect of the button label.</p>
+								<p class="tinfo">Certain effects (like <span class="tval">"slide-in"</span> or <span class="tval">"slide-out-out"</span>) cannot work with <span class="tname">labelConnected:</span> <span class="tval">true</span> and so, if chosen, they will reset <span class="tname">labelConnected</span> to <span class="tval">false</span>.</p>
+								<p class="tinfo"><span class="tval">"slide-in"</span> includes fade so there is no separate <span class="tval">"slide-in-fade"</span>.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>labelAnimate</td>
+							<td>"default"</td>
+							<td>[&lt;time&gt;, &lt;ease&gt;], [400, "easeOutQuad"], "default"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The animation parameters of the label effect. The time is in milliseconds and for the easing, see the <a href="#easing" target="_self">Easing options</a> at the bottom of the table.</p>
+								<p>Different effects have different default values so you can just set <span class="tval">"default"</span> and the sidebar will automatically pick the defaults for that effect.</p>
+								<p>Additionally, you can set different parameters for the <span class="bold">show</span> and the <span class="bold">hide</span> effects, as so:</p>
+<pre><code data-language="javascript">labelAnimate: {
+    show: [&lt;time&gt;, &lt;ease&gt;],
+    hide: [&lt;time&gt;, &lt;ease&gt;]
+}</code></pre>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>labelConnected</td>
+							<td>false</td>
+							<td>true, false</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>If the button and label should be visually connected or not. If they are connected, when the label appears, it looks like it expands from the button.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>sideSpace</td>
+							<td>false</td>
+							<td>true, false</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>If there should be space on the side of the bar.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>buttonSpace</td>
+							<td>false</td>
+							<td>true, false</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>If there should be space between the buttons.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>labelSpace</td>
+							<td>false</td>
+							<td>true, false</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>If there should be space between the label and the button.</p>
+							</td>
+						</tr>
+
+						<tr id="settings-subbar" class="comment-row">
+							<td colspan="3">// Subbar</td>
+						</tr>
+						<tr class="name-row">
+							<td>subPosition</td>
+							<td>["circular",105,-90,90]</td>
+							<td>"under", "side", ["circular", &lt;radius&gt;, &lt;start rad&gt;, &lt;end rad&gt;]</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The position of the subbar. It can be <span class="tval">"under"</span> the button, on the <span class="tval">"side"</span> of the button or <span class="tval">"circular"</span>, around the button.</p>
+								<p>If it is <span class="tval">"circular"</span>, there are other values that can be included such as the radius of the circle and the start and end radians.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>subEffect</td>
+							<td>"slide"</td>
+							<td>"fade", "slide", "linear-fade", "linear-slide", [&lt;effect&gt;, &lt;interval&gt;], "none"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The appearance effect of the subbar.</p>
+								<p>For the <span class="tval">"linear-fade"</span> and <span class="tval">"linear-slide"</span> effects, the value can be an array with the effect name and the interval in ms between the animation of each button: <span class="tval">["linear-fade", 30]</span>.</span></p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>subAnimate</td>
+							<td>[400, "easeOutQuad"]</td>
+							<td>[&lt;time&gt;, &lt;ease&gt;], [400, "easeOutQuad"], "default"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The animation parameters of the subbar. The time is in milliseconds and for the easing, see the <a href="#easing" target="_self">Easing options</a> at the bottom of the table.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>subSpace</td>
+							<td>false</td>
+							<td>true, false</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>If there should be space between the subbar and the button.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>subOpen</td>
+							<td>"mouseover"</td>
+							<td>"mouseover", "click"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>If the subbar should be opened on mouseover or on click.</p>
+							</td>
+						</tr>
+
+						<tr id="settings-window" class="comment-row">
+							<td colspan="3">// Window</td>
+						</tr>
+						<tr class="name-row">
+							<td>windowPosition</td>
+							<td>["center", "center"]</td>
+							<td>[&lt;horizontal&gt;, &lt;vertical&gt;], ["center", "20%"], ["center", 20]</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The position of the window. The format is <span class="tval">[&lt;horizontal&gt;, &lt;vertical&gt;]</span>. Horizontal values are <span class="tval">"left"</span>, <span class="tval">"center"</span> and <span class="tval">"right"</span> and the vertical values are <span class="tval">"top"</span>, <span class="tval">"center"</span> and <span class="tval">"bottom"</span>.</p>
+								<p>Additionally, the values can be exact numbers like <span class="tval">20</span> (px) or percentages like <span class="tval">"20%"</span>.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>windowOffset</td>
+							<td>[0, 0]</td>
+							<td>[&lt;horizontal&gt;, &lt;vertical&gt;], [10, 20]</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The offset in position starting from the <span class="tname">windowPosition</span> setting. These values are added to the positions calculated previously.</p>
+								<p>The format is <span class="tval">[&lt;horizontal&gt;, &lt;vertical&gt;]</span> where the values are numbers.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>windowCorners</td>
+							<td>"match"</td>
+							<td>"square", "round", "match"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The type of the window corners.</p>
+								<p>If set to <span class="tval">"match"</span>, it will correspond with the shape of the buttons.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>windowColor</td>
+							<td>"match"</td>
+							<td>"default", "blue", "red", "yellow", "green", "white", "black", "match"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The color of the header of the window.</p>
+								<p>If set to <span class="tval">"match"</span>, it will correspond with <span class="tname">buttonColor</span>.</p>
+								<p class="tinfo">These are only a few default color options, you can edit the CSS code and add any colors you want.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>windowShadow</td>
+							<td>true</td>
+							<td>true, false</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>If the window should have a shadow or not.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>windowDraggable</td>
+							<td>true</td>
+							<td>true, false</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>If the window should be draggable from the header or not.</p>
+							</td>
+						</tr>
+
+						<tr class="comment-row">
+							<td colspan="3">// Other</td>
+						</tr>
+						<tr class="name-row">
+							<td>showAfterPosition</td>
+							<td>false</td>
+							<td>&lt;scroll position&gt;, false</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>If the sidebar should be shown only after the page was scrolled beyond a certain point.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>barAnimate</td>
+							<td>[250, "easeOutQuad"]</td>
+							<td>[&lt;time&gt;, &lt;ease&gt;], [250, "easeOutQuad"], "default"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>The animation parameters of the bar. The time is in milliseconds and for the easing, see the <a href="#easing" target="_self">Easing options</a> at the bottom of the table.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>hideUnderWidth</td>
+							<td>false</td>
+							<td>&lt;page width&gt;, false</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>If the sidebar should be hidden when the browser window is under a certain width.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>shareTarget</td>
+							<td>"default"</td>
+							<td>"blank", "popup", "default"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>How the share window will be opened. <span class="tval">"blank"</span> to open the page in a new browser tab/window, <span class="tval">"popup"</span> to open the page in a popup window or <span class="tval">"default"</span> to use the default setting for each button.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>animateEngine</td>
+							<td>"velocity"</td>
+							<td>"velocity", "jQuery"</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>Which engine to use for animations.</p>
+								<p>When using <span class="tval">"jQuery"</span>, it is no longer necessary to load the <span class="file">velocity.min.js</span> file on the page.</p>
+							</td>
+						</tr>
+
+						<tr class="comment-row">
+							<td colspan="3">// Share</td>
+						</tr>
+						<tr class="name-row">
+							<td>shareUrl</td>
+							<td>null</td>
+							<td>&lt;page url&gt;</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>A custom page URL to be used in the share window, instead of the current page URL.</p>
+								<p class="tinfo">If the setting is not specified or set to <span class="tval">null</span>, the current page URL is used.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>shareTitle</td>
+							<td>null</td>
+							<td>&lt;page title&gt;</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>A custom page title to be used in the share window, instead of the current page title.</p>
+								<p class="tinfo">If the setting is not specified or set to <span class="tval">null</span>, the current page title is used.</p>
+							</td>
+						</tr>
+
+						<tr class="comment-row">
+							<td colspan="3">// Extra</td>
+						</tr>
+						<tr class="name-row">
+							<td>shareServices</td>
+							<td>{...}</td>
+							<td>&lt;new share services&gt;</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>Adds new or changes the existing sharing services.</p>
+								<p>More information is explained in the <a href="#add-share-service">Add a share service</a> section.</p>
+							</td>
+						</tr>
+						<tr class="name-row">
+							<td>formData</td>
+							<td>{ }</td>
+							<td>&lt;forms data&gt;</td>
+						</tr>
+						<tr class="desc-row">
+							<td colspan="3">
+								<p>Specifies data to be used by the window forms.</p>
+								<p>More information is explained in the <a href="#window-form">Window form</a> section.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div id="easing">
+					<h4 class="no-space">Easing options</h4>
+					<p>The available easing values for the animation settings are the following:</p>
+					<div id="easebox">
+						<ul class="col-list">
+							<li>
+								<ul>
+									<li>easeInSine</li>
+									<li>easeOutSine</li>
+									<li>easeInOutSine</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>easeInQuad</li>
+									<li>easeOutQuad</li>
+									<li>easeInOutQuad</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>easeInCubic</li>
+									<li>easeOutCubic</li>
+									<li>easeInOutCubic</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>easeInQuart</li>
+									<li>easeOutQuart</li>
+									<li>easeInOutQuart</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>easeInQuint</li>
+									<li>easeOutQuint</li>
+									<li>easeInOutQuint</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>easeInExpo</li>
+									<li>easeOutExpo</li>
+									<li>easeInOutExpo</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>easeInCirc</li>
+									<li>easeOutCirc</li>
+									<li>easeInOutCirc</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>ease</li>
+									<li>ease-in</li>
+									<li>ease-out</li>
+									
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>ease-in-out</li>
+									<li>spring</li>
+								</ul>
+							</li>
+						</ul>
+						<div><a href="http://velocityjs.org/#easing" target="_blank">+ more on velocityjs.org/#easing</a></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="css-js-code" class="section">
+				<h3>CSS code</h3>
+				<ul class="slist">
+					<li><span>You can edit the CSS code to customize anything about the sidebar look that you want.</span></li>
+					<li><span>
+						The sidebar CSS file is called <span class="file">super-sidebar.min.css</span> and is located in the <span class="file">super-sidebar/css</span> folder. This file is minified. You can find the source file next to it, in the same folder.
+						<br>Copy the contents of the source and replace all of the code in the minified file. Now you can make changes and see them live.
+					</span></li>
+					<li><span>The code is ordered to resemble the structure of the sidebar HTML code, to make it easier to understand and work with. Comments are at the head of every section and the styles inside are about elements in that section.</span></li>
+					<li><span>You can play around and experiment with customizing the CSS code in different ways. Don't be afraid of breaking anything because you always have the original file as a backup, in case anything goes wrong.</span></li>
+					<li><span>
+						Once you are done with the customizations and are ready to deploy the file online, it is a good idea to minify it so that it will load faster. You can use a service such as <a href="https://cssminifier.com" target="_blank">cssminifier.com</a>.
+						<br>Remember to save a copy of the source for yourself, in case you want to make further modifications later.
+					</span></li>
+				</ul>
+
+				<h3 class="big-space">JS code</h3>
+				<ul class="slist">
+					<li><span>For more advanced users, it is also possible to edit the JavaScript code in order to customize anything about the sidebar functionality that you want.</span></li>
+					<li><span>
+						The sidebar JS file is called <span class="file">jquery.super-sidebar.min.js</span> and is located in the <span class="file">super-sidebar/js</span> folder. This file is minified. You can find the source file next to it, in the same folder.
+						<br>Copy the contents of the source and replace all of the code in the minified file. Now you can make changes and see them live.
+					</span></li>
+					<li><span>
+						The bulk of the code is in the <span class="func">build</span> function, where the gallery is initialized and its functionality built.
+						<br>You can also see the default settings, sharing services as well as other data.
+					</span></li>
+					<li><span>Don't be afraid to experiment with modifying the code as you will always have the original file as a backup, in case anything goes wrong.</span></li>
+					<li><span>
+						After you have made the changes that you want and are ready to deploy the file online, it is a good idea to minify it so that it will load faster. You can use a service such as <a href="https://jscompress.com" target="_blank">jscompress.com</a>.
+						<br>Remember to save a copy of the source for yourself, in case you want to make further modifications later.
+					</span></li>
+				</ul>
+			</div>
+
+			<div id="problem" class="section">
+				<h3>Problem</h3>
+				<p>If you have a problem with the sidebar, a few common things to do are:</p>
+				<ul class="slist">
+					<li><span>Make sure that jQuery is not added multiple times on the page.
+						<br>If you already have jQuery on your page, remove it from the sidebar assets code. But make sure that your jQuery is added before any sidebar JS file.</span></li>
+
+					<li><span>Open the browser developer tools (F12) and see if there are any errors shown in the console.
+						<br>If there are any error messages shown, try to read and understand what they say. Try to google them to find out more information about what they mean or send the messages to me and I will explain them to you.</span></li>
+
+					<li><span>Have a look over the sidebar <a href="https://codecanyon.net/item/super-sidebar/19389445/comments" target="_blank">message board</a>, in case the problem has been discussed before and solved.</span></li>
+					<li><span>Make sure that you have added all of the sidebar code (assets, markup, build) to your page.</span></li>
+					<li><span>Make sure that all of the used files are accessible and loading well (CSS, JS).</span></li>
+				</ul>
+				<p class="space">If you cannot fix the problem, please <a href="#contact">contact me</a> and I will help you. If possible, it would be useful if you could send me a link to where I can look over your implementation so that I can give you specific feedback. If it is not possible to send me a link, just describe the problem to me and I will try to replicate it on my end.</p>
+			</div>
+
+			<div id="contact" class="section">
+				<h3>Contact</h3>
+				<p>If you have any questions or need some help, please contact me.</p>
+				<p>The fastest way that you can get in touch with me is to simply send me an email at <a href="mailto:contact@creativetier.com" target="_blank">contact@creativetier.com</a>.</p>
+				<p>Another option to send me a message is to use the <a href="https://codecanyon.net/user/creativetier#contact" target="_blank">contact form</a> on my CodeCanyon profile page.</p>
+				<p>Or you can simply post a message on the sidebar <a href="https://codecanyon.net/item/super-sidebar/19389445/comments" target="_blank">message board</a> and I will answer you there.</p>
+			</div>
+
+			<div id="credits" class="section">
+				<h3>Credits</h3>
+				<p>Thank you to the following:</p>
+				<ul class="slist">
+					<li><span><a href="http://fontawesome.com" target="_blank">fontawesome.com</a>: For the button icons.</span></li>
+					<li><span><a href="http://jquery.com" target="_blank">jquery.com</a>: For the jQuery library.</span></li>
+					<li><span><a href="http://velocityjs.org" target="_blank">velocityjs.org</a>: For the Velocity animation engine.</span></li>
+				</ul>
+			</div>
+
+			<div id="footer">
+				<p>Thank you for purchasing <span class="bold">Super Sidebar</span>! If you have time, please consider rating it on <a href="https://codecanyon.net/item/super-sidebar/19389445" target="_blank">CodeCanyon</a>. Also, have a look on <a href="https://codecanyon.net/user/creativetier/portfolio" target="_blank">my portfolio</a> page, maybe you will find something else you will like.</p>
+				<div id="copy">&copy; CreativeTier</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
